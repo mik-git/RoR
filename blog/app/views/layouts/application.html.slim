@@ -3,9 +3,13 @@ html
   head
     title
       | Blog
+    h1 Жирный текст хеадера
+    p Текст хеадера на всех страницах
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   body
     = yield
+  foot
+    p Текст в самом низу страницы
