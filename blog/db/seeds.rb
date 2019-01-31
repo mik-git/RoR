@@ -15,6 +15,8 @@ hash_users = 10.times.map do
   {
      name: FFaker::Internet.user_name,
      email: FFaker::Internet.safe_email
+     email: email,
+     password: email
   }
 end
 users = User.create!(hash_users)
