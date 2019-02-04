@@ -1,4 +1,7 @@
 h1 Welcome to my BLOG
-p wow, you visit that page #{session[:times_here]} times
-
 a href="http://0.0.0.0:3000/mypage/myaction" title='Моя страничка' Перейти на мою страничку
+p wow, you visit that page #{session[:times_here]} times
+= render "components/page/page" do
+  p.alert.alert-success Hello from our first component!
+
+

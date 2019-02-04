@@ -7,8 +7,8 @@ html
     p Текст хеадера на всех страницах
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application'
   body
     = render 'shared/header'
     = yield

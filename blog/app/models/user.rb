@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  devise :omniauthable, omniauth_providers: %i[vkontakte]
   before_destroy :log_before_destory
   after_destroy :log_after_destory
   has_many :posts, dependent: :destroy
